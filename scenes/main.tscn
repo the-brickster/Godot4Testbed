@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://boi7nms6v30m8"]
+
+[ext_resource type="Script" path="res://scripts/main/main.gd" id="1_gf2sm"]
+[ext_resource type="PackedScene" uid="uid://1dcyymgrpee3" path="res://scenes/FreeCam.tscn" id="2_cwg3d"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_clpiv"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_gf2sm")
+
+[node name="FreeCam" parent="." instance=ExtResource("2_cwg3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.62276)
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59454, 0, 0)
+mesh = SubResource("BoxMesh_clpiv")

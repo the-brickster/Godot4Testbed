@@ -1,0 +1,11 @@
+# SCsub
+
+Import('env')
+
+env_goxlap = env.Clone()
+env_goxlap.Append(CPPATH=["include"])
+
+module_subdirs = ["","engine/","lib/","lib/fastnoise/"]
+
+for f in module_subdirs:
+    env_goxlap.add_source_files(env.modules_sources, f+"*.cpp") # Add all cpp files to the build
